@@ -16,7 +16,7 @@ var IceCream = require('../models/iceCream');
     exports.iceCream_view_all_Page = async function(req, res) { 
         try{ 
             theIceCreams = await iceCream.find(); 
-            res.render('iceCream', { title: 'IceCream Search Results', results: theIceCreams }); 
+            res.render('iceCreams', { title: 'IceCream Search Results', results: theIceCreams }); 
         } 
         catch(err){ 
             res.status(500); 
