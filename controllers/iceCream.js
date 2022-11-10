@@ -30,10 +30,23 @@ exports.iceCream_detail = function(req, res) {
 }; 
  
 // Handle IceCream create on POST. 
-exports.iceCream_create_post = function(req, res) { 
-    res.send('NOT IMPLEMENTED: IceCream create POST'); 
-}; 
- 
+
+    exports.iceCream_create_post = async function(req, res) { 
+        console.log(req.body) 
+        let document = new IceCream(); 
+        document.icecream_brand = req.body.icecream_brand; 
+        document.icecream_flavour = req.body.icecream_flavour; 
+        document.calories = req.body.calories; 
+        try{ 
+            let result = await document.save(); 
+            res.send(result); 
+        } 
+        catch(err){ 
+            res.status(500); 
+            res.send(`{"error": ${err}}`); 
+        }   
+    }; 
+   
 // Handle IceCream delete form on DELETE. 
 exports.iceCream_delete = function(req, res) { 
     res.send('NOT IMPLEMENTED: IceCream delete DELETE ' + req.params.id); 
