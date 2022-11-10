@@ -4,6 +4,5 @@ const iceCreamSchema = mongoose.Schema({
     icecream_flavour: String, 
     calories: Number 
 }) 
-
  
 module.exports = mongoose.model("IceCream", iceCreamSchema) 
