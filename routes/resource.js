@@ -17,7 +17,7 @@ router.get('/', api_controller.api);
 router.post('/iceCreams', iceCream_controller.iceCream_create_post); 
  
 // DELETE request to delete iceCream. 
-router.delete('/iceCreams/:id', iceCreamcontroller.iceCream_delete); 
+router.delete('/iceCreams/:id', iceCream_controller.iceCream_delete); 
  
 // PUT request to update iceCream. 
 router.put('/iceCreams/:id', iceCream_controller.iceCream_update_put); 
