@@ -54,7 +54,7 @@ async function recreateDB(){
   await IceCream.deleteMany(); 
  
   let instance1 = new 
-Costume({icecream_brand:"qualitywalls",  icecream_flavour:"choclate", 
+IceCream({icecream_brand:"qualitywalls",  icecream_flavour:"choclate", 
 calories:22.3}); 
   instance1.save( function(err,doc) { 
       if(err) return console.error(err); 
@@ -62,7 +62,7 @@ calories:22.3});
   }); 
 
   let instance2 = new 
-Costume({icecream_brand:"Bluebell",  icecream_flavour:"ButterPecan", 
+  IceCream({icecream_brand:"Bluebell",  icecream_flavour:"ButterPecan", 
 calories:12.3}); 
   instance2.save( function(err,doc) { 
       if(err) return console.error(err); 
@@ -70,7 +70,7 @@ calories:12.3});
   }); 
 
   let instance3 = new 
-Costume({icecream_brand:"Magnum",  icecream_flavour:"Teaberry", 
+  IceCream({icecream_brand:"Magnum",  icecream_flavour:"Teaberry", 
 calories:13}); 
   instance3.save( function(err,doc) { 
       if(err) return console.error(err); 
