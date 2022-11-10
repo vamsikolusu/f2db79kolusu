@@ -1,9 +1,18 @@
 var IceCream = require('../models/iceCream'); 
  
 // List of all IceCream
-exports.iceCream_list = function(req, res) { 
-    res.send('NOT IMPLEMENTED: IceCream list'); 
-}; 
+
+    exports.iceCream_list = async function(req, res) { 
+        try{ 
+            theIceCreams = await IceCream.find(); 
+            res.send(theIceCreams); 
+        } 
+        catch(err){ 
+            res.status(500); 
+            res.send(`{"error": ${err}}`); 
+        }   
+    }; 
+
  
 // for a specific IceCream. 
 exports.iceCream_detail = function(req, res) { 
